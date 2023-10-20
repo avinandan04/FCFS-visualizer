@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Scheduling Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>FCFS Scheduling Algorithm Visualization</h1>
+        <div class="input-section">
+            <label for="process-id">Process ID:</label>
+            <input type="text" id="process-id">
+
+            <label for="arrival-time">Arrival Time:</label>
+            <input type="number" id="arrival-time">
+
+            <label for="burst-time">Burst Time:</label>
+            <input type="number" id="burst-time">
+            <div class="btn">
+
+            <button onclick="addProcess()">Add Process</button>
+            <button onclick="deleteProcess()">Delete Process</button>
+
+            <button onclick="calculate()">Calculate</button>
+            <button onclick="visualize()">Visualize</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="process-table">
+                <thead>
+                    <tr>
+                        <th>Process ID</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="result">
+            <h2>Result:</h2>
+            <div id="average-times"></div>
+            <h2>Gantt Chart:</h2>
+            <div id="gantt-chart"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
